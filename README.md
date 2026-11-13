@@ -17,7 +17,7 @@ Ein neutrales MyBB-Plugin für Rollenspielforen. Es stellt eine frei pflegbare S
 
 - MyBB 1.8.x
 - PHP-Version passend zur eingesetzten MyBB-Version
-- optional Font Awesome im Theme für die Kachel- und Statistik-Icons
+- optional Font Awesome im Theme für selbst eingetragene Kachel-Icons
 
 Das Plugin ist eigenständig und benötigt **Ladytime Core nicht**.
 
