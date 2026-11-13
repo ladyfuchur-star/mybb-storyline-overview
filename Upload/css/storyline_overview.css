@@ -1,0 +1,241 @@
+/* Storyline Overview 1.7.0
+ * Nur Anordnung, Abstände und responsive Darstellung.
+ * Farben, Flächen, Rahmen und Typografie kommen aus den
+ * MyBB-Klassen tborder, thead, trow1, trow2, smalltext und button.
+ */
+
+.storyline-page-bg {
+    min-height: 100%;
+}
+
+.storyline-wrap {
+    width: auto;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.storyline-topbox,
+.storyline-panel,
+.storyline-cta-wrap {
+    margin-bottom: 15px;
+}
+
+.storyline-topbox {
+    position: relative;
+    overflow: hidden;
+    min-height: 220px;
+}
+
+.storyline-topbox::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 34%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.storyline-topbox > * {
+    position: relative;
+    z-index: 1;
+}
+
+.storyline-panel-head {
+    padding: 10px 12px;
+}
+
+.storyline-topbox-body,
+.storyline-panel-body {
+    padding: 15px;
+}
+
+.storyline-topbox-body {
+    width: auto;
+    max-width: 66%;
+}
+
+.storyline-scroll {
+    max-height: 240px;
+    overflow-y: auto;
+    line-height: 1.6;
+}
+
+.storyline-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(260px, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: stretch;
+}
+
+.storyline-pulse-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: stretch;
+}
+
+.storyline-intro-grid > *,
+.storyline-pulse-grid > * {
+    min-width: 0;
+}
+
+.storyline-intro-grid .storyline-panel,
+.storyline-pulse-grid .storyline-panel {
+    margin-bottom: 0;
+}
+
+.storyline-pulse-grid .storyline-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.storyline-stats-list,
+.storyline-recent-list {
+    flex: 1 1 auto;
+}
+
+.storyline-content {
+    line-height: 1.65;
+}
+
+.storyline-content > :first-child,
+.storyline-scroll > :first-child {
+    margin-top: 0;
+}
+
+.storyline-content > :last-child,
+.storyline-scroll > :last-child {
+    margin-bottom: 0;
+}
+
+.storyline-fact-row,
+.storyline-stat-row,
+.storyline-recent-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px 12px;
+}
+
+.storyline-fact-row:first-child,
+.storyline-stat-row:first-child,
+.storyline-recent-row:first-child {
+    border-top: 0;
+}
+
+.storyline-fact-label,
+.storyline-stat-label {
+    font-weight: bold;
+}
+
+.storyline-fact-value,
+.storyline-stat-value,
+.storyline-recent-date {
+    text-align: right;
+}
+
+.storyline-recent-subject {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.storyline-cta-wrap {
+    margin-top: 15px;
+}
+
+.storyline-cta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+}
+
+.storyline-cta-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    min-height: 230px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.storyline-cta-icon {
+    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.storyline-cta-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.storyline-cta-text {
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.storyline-cta-button {
+    margin-top: auto;
+    text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+    .storyline-intro-grid,
+    .storyline-pulse-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .storyline-topbox-body {
+        max-width: none;
+    }
+
+    .storyline-topbox::after {
+        opacity: 0.18;
+    }
+
+    .storyline-cta-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 600px) {
+    .storyline-wrap {
+        margin: 10px auto;
+    }
+
+    .storyline-topbox::after {
+        display: none;
+    }
+
+    .storyline-fact-row,
+    .storyline-stat-row,
+    .storyline-recent-row {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .storyline-fact-value,
+    .storyline-stat-value,
+    .storyline-recent-date {
+        text-align: left;
+    }
+
+    .storyline-cta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .storyline-cta-card {
+        min-height: 0;
+    }
+}
