@@ -2,6 +2,16 @@
 
 Ein neutrales MyBB-Plugin für Rollenspielforen. Es stellt eine frei pflegbare Storyline-Seite mit Fakten, Inplay-Statistik, zuletzt aktiven Szenen und bis zu vier Link-Kacheln bereit.
 
+## Praxisbeispiel aus einem laufenden Forum
+
+Das folgende Bild zeigt die individuell konfigurierte Storyline-Seite des aktiven Rollenspielforums **Saint Hollow**. Diese forumspezifische Ausgangsfassung diente als Grundlage für die neutrale Veröffentlichung.
+
+![Verschwommenes Praxisbeispiel der Storyline-Seite in Saint Hollow](docs/saint-hollow-storyline-beispiel-verschwommen.png)
+
+Konkrete Storyline-Texte, Faktenwerte, Szenennamen und Beschreibungen wurden für die öffentliche Vorschau stark verschwommen dargestellt. Das öffentliche Plugin enthält weder diese Inhalte noch das Saint-Hollow-Design.
+
+Sichtbar bleiben ausschließlich Aufbau und Funktionsbereiche: Überblick, ausführliche Storyline, wichtige Fakten, Inplay-Statistik, letzte Szenen und frei belegbare Link-Kacheln.
+
 ## Funktionen
 
 - Storyline und Überblick als frei pflegbare HTML-Inhalte
